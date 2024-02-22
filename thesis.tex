@@ -1,0 +1,114 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[nobib, a4paper, notoc, oneside, openany]{tufte-book} % Use the tufte-book class which in turn uses the tufte-common class
+\input{includes/packages}
+\input{includes/definitions}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\frontmatter
+
+%----------------------------------------------------------------------------------------
+
+% =============================================================================
+% Titlepage
+% =============================================================================
+\input{./pages/titlepage}
+\vspace*{\fill}
+\noindent
+\begin{minipage}{.8\textwidth}
+	\textbf{\authorsurname, \authorfirstname:}\\
+	\emph{\title}\\
+	\thesiskind\\
+	University of Tübingen\\
+	Processing period: \thesisstart\ - \thesisend
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Abstract
+%----------------------------------------------------------------------------------------
+\input{pages/Abstract.tex}
+
+\begin{fullwidth}
+% \parttoc % Insert the document TOC
+\etocsettocdepth{subsection}
+\tableofcontents % Print the table of contents
+% redefine the headings of the TOCs to use \section* rather than \chapter*
+\etocarticlestyle
+\end{fullwidth}
+
+\mainmatter
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+\input{chapters/01_Introduction.tex}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 2 ....
+%----------------------------------------------------------------------------------------
+% \input{chapters/filename}
+
+%----------------------------------------------------------------------------------------
+
+\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\begin{fullwidth}
+	\printbibliography
+	\addcontentsline{toc}{chapter}{Bibliography}
+\end{fullwidth}
+
+%----------------------------------------------------------------------------------------
+
+% Abbreviations
+\input{pages/Abbreviations.tex}
+
+%----------------------------------------------------------------------------------------
+\makeatletter
+\renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
+\makeatother
+\begin{fullwidth}
+	\listoffigures % Print a list of figures
+	\addcontentsline{toc}{chapter}{List of Figures}
+\end{fullwidth}
+
+%----------------------------------------------------------------------------------------
+\makeatletter
+\renewcommand*\l@code{\@dottedtocline{1}{1.5em}{2.3em}}
+\makeatother
+\begin{fullwidth}
+	\listofcode % Print a list of Code
+	\addcontentsline{toc}{chapter}{List of Code}
+\end{fullwidth}
+
+%----------------------------------------------------------------------------------------
+
+\makeatletter
+\renewcommand*\l@table{\@dottedtocline{1}{1.5em}{2.3em}}
+\makeatother
+\begin{fullwidth}
+	\listoftables % Print a list of tables
+	\addcontentsline{toc}{chapter}{List of Tables}
+\end{fullwidth}
+
+%----------------------------------------------------------------------------------------
+%	Appendix
+%----------------------------------------------------------------------------------------
+\appendix
+\begin{appendix}
+\input{appendix/appendix.tex}
+\end{appendix}
+
+\input{pages/Selbständigkeitserklärung.tex}
+
+\end{document}

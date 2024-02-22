@@ -1,0 +1,112 @@
+\chapter{Introduction}
+This is an example chapter that uses commands specific to the tufte layout and the created commands. The commands were developed during the writing of \cite{schmiegel2023}. That master thesis was written in the \ac{nip} research group.
+
+\section{Vero Eos}
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+
+\begin{marginfigure}
+    \includegraphics{figures/books.png}
+    \caption{Lorem ipsum dolor sit amet. More information about the image can be found in \protect\appref{app:appendix3}.}
+    \label{fig:books}
+\end{marginfigure}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.\footnote{Duis autem vel eum iriure dolor in hendrerit.} Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.\footnote{Augue duis dolore te.} At vero eos et (\coderef{code:pyem2a}) accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\begin{code}
+\begin{minted}[breaklines, breakanywhere, linenos, numbersep=5pt, gobble=0, frame=leftline]{python}
+def extractEmojis(unicode):
+    global fileName
+    # test if file already exists
+    fileName = f'./images/{unicode}.png'
+    file_exists = os.path.exists(fileName)
+    if not file_exists:
+        # download emoji
+        url = f'https://emoji.aranja.com/static/emoji-data/img-apple-160/{unicode}.png'
+        urllib.request.urlretrieve(url, fileName)
+\end{minted}
+\caption{This code is part of the pyem2a project.}
+\label{code:pyem2a}
+\end{code}
+
+\subsection{Eum Iriure Dolor}
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.\footnote{Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.} Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat (\figref{fig:books2}) volutpat.
+
+\begin{figure}
+    \includegraphics{figures/books.png}
+    \caption[Lorem ipsum dolor sit amet.]{Lorem ipsum dolor sit amet. More information about the image can be found in \appref{app:appendix3}.}
+    \label{fig:books1}
+\end{figure}
+
+\subsection{Minim Veniam}
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
+
+\begin{figure*}
+    \includegraphics[width=15cm]{figures/books.png}
+    \caption[Lorem ipsum dolor sit amet.]{Lorem ipsum dolor sit amet. More information about the image can be found in \appref{app:appendix3}.}
+    \label{fig:books2}
+\end{figure*}
+
+\section{Sed Diam Voluptua}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\footnote{For more information see \tabref{tab:table1}}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{@{}lll@{}}
+    \toprule
+    \textbf{name} & \textbf{value 1} & \textbf{value 2} \\ 
+    \midrule
+    zzril delenit & 1.000 & 0.119838 \\
+    option congue & 5.000 & 0.347119 \\
+    imperdiet doming & 0.125 & 0.404985 \\
+    id quod & 1.375 & 0.358990 \\
+    mazim placerat & 0.125 & 0.116606 \\
+    sed diam & 0.500 & 0.219490 \\
+    minim veniam & 0.625 & 0.112587 \\
+    \bottomrule
+    \end{tabular}
+    \caption{An example for a table}
+    \label{tab:table1}
+\end{table}
+
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+\begin{table*}
+    \centering
+    \begin{tabular}{llllllll}
+        \toprule
+        \textbf{feugait} & \textbf{dolore} & \textbf{odio} & \textbf{prior} & \textbf{iusto} & \textbf{feugait} & \textbf{praesent} & \textbf{et} \\
+        \midrule
+        Lorem & Ipsum & Dolor & & adipiscing & (1, 1) & hendrerit & [[101.6995]] \\
+        facilisis & Ipsum & Dolor & & adipiscing & (1,) & hendrerit & [-4.14673] \\
+        Dolor & Ipsum & Dolor & & Lorem & () & hendrerit & 2.68172 \\
+        Ipsum & diam & Ipsum & & euismod & () & hendrerit & 95.24376 \\
+        Ipsum & euismod & kasd & & sed & () & hendrerit & 0.44245 \\
+        nonummy & Ipsum & Ipsum & & volutpat & () & hendrerit & 578.3492 \\
+        Ipsum & sed & Dolor & & volutpat & () & hendrerit & 17.7574 \\
+        Ipsum & Ipsum & diam & & aliquam & (1, 1) & hendrerit & [[0.31899]] \\
+        Ipsum & Ipsum & Dolor & & dolore & (1,) & hendrerit & [2.67118] \\
+        \bottomrule
+    \end{tabular}
+    \caption[][0.4cm]{Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.}
+    \label{tab:table2}
+\end{table*}
+
+Lorem ipsum dolor sit amet,\sidenote[][1cm]{See \tabref{tab:table2}.} consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+
+\begin{figure*}
+    \centering
+    \subfloat[subtitle 1]{\includegraphics[width=0.45\textwidth]{figures/books.png}}
+    \hfill
+    \subfloat[subtitle 2]{\includegraphics[width=0.45\textwidth]{figures/books.png}}
+    \vspace{0.5cm}
+    \caption{Duis autem vel eum iriure dolor in hendrerit.\label{fig:ComparisonWithGammaDetailed}}
+\end{figure*}
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
+
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
