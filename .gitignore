@@ -4,6 +4,9 @@
 ### Scripts ###
 clean.ps1
 
+### "secret" assets ###
+assets/pages
+
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
 *.aux
