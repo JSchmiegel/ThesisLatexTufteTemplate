@@ -1,5 +1,6 @@
-# Uni Tübingen Latex Template (based of the Tufte Template)
-![title page](./assets/overviewpages.png)
+# Thesis Latex Template (based of the Tufte Template)
+#### For the Eberhard Karls University Tübingen
+![overview pages](./assets/overviewpages.png)
 
 This template for a thesis is base on the [tufte-latex](https://github.com/Tufte-LaTeX/tufte-latex) template by [Kevin Godby](https://github.com/godbyk), [Bil Kleb](https://github.com/kleb), and Bill Wood. I changed the folder structure a bit and added a personal touch.
 
